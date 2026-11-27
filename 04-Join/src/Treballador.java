@@ -7,16 +7,15 @@ public class Treballador extends  Thread {
     private float sou_anual_brut;
     private int edat_inici_treball;
     private int edat_fi_treball;
-
-    public Treballador(String nom, int edat_actual, float cobrat, float sou_anual_brut, int edat_inici_treball, int edat_fi_treball) {
-        super(nom);
-        this.sou_anual_brut = sou_anual_brut;
-        this.edat_inici_treball = edat_inici_treball;
-        this.edat_fi_treball = edat_fi_treball;
-        this.edat_actual = 0;
-        this.cobrat = 0.0f;
-        this.rnd = new Random();
-    }
+        public Treballador(String nom, float sou_anual_brut, int edat_inici_treball, int edat_fi_treball) {
+            super(nom);
+            this.sou_anual_brut = sou_anual_brut;
+            this.edat_inici_treball = edat_inici_treball;
+            this.edat_fi_treball = edat_fi_treball;
+            this.edat_actual = 0;
+            this.cobrat = 0.0f;
+            this.rnd = new Random();
+        }
 
     public void cobra() {
         this.cobrat += this.sou_anual_brut / 12.0f;
